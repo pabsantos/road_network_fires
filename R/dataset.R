@@ -44,15 +44,25 @@ count_sinistros <- function(snv_conic, prf_conic) {
         dplyr::count(id_trecho_, name = "n_sinistros")
 }
 
-build_dataset <- function(snv_conic, prf_conic, focos_conic, vdma_ano, ano, buffer) {
+build_dataset <- function(
+    snv_conic,
+    prf_conic,
+    focos_conic,
+    vdma_ano,
+    ano,
+    buffer
+) {
     snv_conic$n_focos <- count_focos(snv_conic, focos_conic, buffer)
 
     snv_conic |>
-        dplyr::left_join(count_sinistros(snv_conic, prf_conic), by = "id_trecho_") |>
+        dplyr::left_join(
+            count_sinistros(snv_conic, prf_conic),
+            by = "id_trecho_"
+        ) |>
         dplyr::left_join(vdma_ano, by = "id_trecho_") |>
         dplyr::mutate(
-            ano    = .env$ano,
-            fluxo  = (VMDa_C + VMDa_D) * 365,
+            ano = .env$ano,
+            fluxo = (VMDa_C + VMDa_D) * 365,
             dist_m = as.numeric(sf::st_length(geometry))
         ) |>
         tidyr::replace_na(list(n_sinistros = 0)) |>

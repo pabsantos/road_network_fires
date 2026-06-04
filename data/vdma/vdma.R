@@ -22,7 +22,11 @@ crosswalk = readRDS("data/snv/snv.rds") |>
     dplyr::distinct(vl_codigo, id_trecho_)
 
 list_dfs[["2021"]] = list_dfs[["2021"]] |>
-    dplyr::rename(vl_codigo = `CODIGO_SNV-SRE`, VMDa_C = VMDA_AB, VMDa_D = VMDA_BA) |>
+    dplyr::rename(
+        vl_codigo = `CODIGO_SNV-SRE`,
+        VMDa_C = VMDA_AB,
+        VMDa_D = VMDA_BA
+    ) |>
     dplyr::inner_join(crosswalk, by = "vl_codigo") |>
     dplyr::summarise(
         VMDa_C = mean(as.numeric(VMDa_C), na.rm = TRUE),

@@ -19,4 +19,7 @@ dependencies = [
     "tidyverse",
     "googledrive",
     "targets",
+    "ggplot2",
+    "ggview",
+    "geobr",
 ]

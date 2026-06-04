@@ -422,6 +422,19 @@ force_source = false
 dependencies = []
 
 [[packages]]
+name = "geobr"
+version = "1.9.1"
+source = { repository = "https://cloud.r-project.org/" }
+force_source = false
+dependencies = [
+    { name = "curl", requirement = "(>= 5.0.0)" },
+    { name = "dplyr", requirement = "(>= 0.8-3)" },
+    "data.table",
+    "fs",
+    { name = "sf", requirement = "(>= 0.9-3)" },
+]
+
+[[packages]]
 name = "ggplot2"
 version = "4.0.2"
 source = { repository = "https://cloud.r-project.org/" }
@@ -436,6 +449,16 @@ dependencies = [
     { name = "scales", requirement = "(>= 1.4.0)" },
     { name = "vctrs", requirement = "(>= 0.6.0)" },
     { name = "withr", requirement = "(>= 2.5.0)" },
+]
+
+[[packages]]
+name = "ggview"
+version = "0.2.2"
+source = { repository = "https://cloud.r-project.org/" }
+force_source = false
+dependencies = [
+    "ggplot2",
+    "rstudioapi",
 ]
 
 [[packages]]

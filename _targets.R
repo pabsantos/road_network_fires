@@ -1,6 +1,13 @@
 library(targets)
 
-tar_option_set(packages = c("sf", "dplyr", "tidyr", "lubridate"))
+tar_option_set(packages = c(
+    "sf",
+    "dplyr",
+    "tidyr",
+    "lubridate",
+    "ggplot2",
+    "geobr"
+))
 
 tar_source()
 
@@ -52,5 +59,20 @@ list(
         ),
         pattern = map(prf_conic, focos_conic, vdma_ano, anos),
         iteration = "list"
+    ),
+
+    tar_target(br_conic, prepare_br(crs_conico)),
+
+    tar_target(
+        taxas,
+        calc_taxas(dataset),
+        pattern = map(dataset),
+        iteration = "list"
+    ),
+    tar_target(
+        mapas,
+        salvar_mapas(taxas, br_conic, anos),
+        pattern = map(taxas, anos),
+        format = "file"
     )
 )
