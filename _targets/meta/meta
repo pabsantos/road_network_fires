@@ -1,0 +1,49 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+anos|stem|5a895b7391035be0|d7299a2a2ce8b869|2c530c1562a7fbd1|-814697309||t20608.8075477s|s104b|104|rds|local|vector||anos_8a1df9e2ee854288*anos_dd26cb6b0d59dfe4*anos_f5438c71d808fd51*anos_f2ce06dfc4b52e40*anos_003e0b7803bf9350*anos_74e3fcbaa41d5aab|0.43|package ‘sf’ was built under R version 4.4.3. package ‘dplyr’ was built under R version 4.4.3. package ‘tidyr’ was built under R version 4.4.3. package ‘lubridate’ was built under R version 4.4.3|
+snv_path|stem|ebd474a7d1369648|ac91a1594961aab3|2c530c1562a7fbd1|374673802|data/snv/snv.rds|t20603.7120025515s|s75627675b|75627675|file|local|vector|||0||
+focos_path|stem|d4246cb30eb5316a|d5b5b8c8d0614fad|2c530c1562a7fbd1|1762502111|data/focos/focos.rds|t20603.7022046742s|s44523785b|44523785|file|local|vector|||0||
+focos_raw|stem|d4246cb30eb5316a|80d442b69ff124d4|0a95b8e037834a1a|989235303||t20608.8077736219s|s44523785b|44523785|rds|local|vector|||1.85||
+focos_conic|pattern|6a0becfc134c54f3|36ce659a658e38df||1446180920||||53295488|rds|local|list||focos_conic_2f49bf84a78ce4f4*focos_conic_731aa5bcea2c2655*focos_conic_8910e5acf0dcfe36*focos_conic_7e4b9213ac94fb36*focos_conic_fb23e1a64986c8fd*focos_conic_f6c594d0c3cc7458|4.459||
+crs_conico|stem|85cda8020e4da3cb|4c615ff520e83eb5|2c530c1562a7fbd1|1367756552||t20608.8099777605s|s53b|53|rds|local|vector|||0.403|package ‘sf’ was built under R version 4.4.3. package ‘dplyr’ was built under R version 4.4.3. package ‘tidyr’ was built under R version 4.4.3. package ‘lubridate’ was built under R version 4.4.3|
+crs_original|stem|cb70b92ba0e5b349|b557318f19afa3b6|2c530c1562a7fbd1|-2024140177||t20608.8099779142s|s53b|53|rds|local|vector|||0||
+buffer_dist|stem|065f665ea0ef39d0|f7fa471aa3f8197f|2c530c1562a7fbd1|-1063234667||t20608.8099781191s|s53b|53|rds|local|vector|||0||
+snv_conic|stem|0330ee7ac832cd2e|b8201b0b19b10287|681a8bb9a7db3cb2|1745048386||t20608.8100683574s|s74292665b|74292665|rds|local|vector|||1.375||
+focos_conic_2f49bf84a78ce4f4|branch|ac7644b01502794e|36ce659a658e38df|071d6141a3b035ea|1088076262||t20608.8135794358s|s9850515b|9850515|rds|local|list|focos_conic||0.916||
+focos_conic_731aa5bcea2c2655|branch|9a5ccc1dd265250f|36ce659a658e38df|071d6141a3b035ea|1975010324||t20608.8136173364s|s8174141b|8174141|rds|local|list|focos_conic||0.68||
+focos_conic_8910e5acf0dcfe36|branch|907dfd793cf56754|36ce659a658e38df|071d6141a3b035ea|958578362||t20608.8136552556s|s8839000b|8839000|rds|local|list|focos_conic||0.649||
+focos_conic_7e4b9213ac94fb36|branch|e4e0cb0767cee1f9|36ce659a658e38df|071d6141a3b035ea|-897457684||t20608.8136913328s|s8238072b|8238072|rds|local|list|focos_conic||0.622||
+focos_conic_fb23e1a64986c8fd|branch|3267392e61e56c5a|36ce659a658e38df|071d6141a3b035ea|-1923439835||t20608.8137378986s|s11915127b|11915127|rds|local|list|focos_conic||0.909||
+focos_conic_f6c594d0c3cc7458|branch|e9b2ed67662664b6|36ce659a658e38df|071d6141a3b035ea|1980959341||t20608.8137703146s|s6278633b|6278633|rds|local|list|focos_conic||0.572||
+prf_path|stem|efd4cb4767d876d8|d7319ca7012158a5|2c530c1562a7fbd1|-1764878262|data/prf/prf.rds|t20608.8187414871s|s16291588b|16291588|file|local|vector|||0.418|package ‘sf’ was built under R version 4.4.3. package ‘dplyr’ was built under R version 4.4.3. package ‘tidyr’ was built under R version 4.4.3. package ‘lubridate’ was built under R version 4.4.3|
+prf_raw|stem|efd4cb4767d876d8|2b1e9c7273203fdb|4439c4e7ecedf80e|-1791147524||t20608.819343821s|s16291588b|16291588|rds|local|vector|||1.031||
+prf_conic_2f49bf84a78ce4f4|branch|b156b9523c1a194d|f90579090956c85c|2a296e70d12bdb39|1873923299||t20608.8193658278s|s2723291b|2723291|rds|local|list|prf_conic||0.354||
+prf_conic_731aa5bcea2c2655|branch|ae25ffede4c6ddbc|f90579090956c85c|2a296e70d12bdb39|1869322578||t20608.8193854783s|s2811222b|2811222|rds|local|list|prf_conic||0.166||
+prf_conic_8910e5acf0dcfe36|branch|1c3d757baacc1a64|f90579090956c85c|2a296e70d12bdb39|-656353||t20608.8194053218s|s2821440b|2821440|rds|local|list|prf_conic||0.235||
+prf_conic_7e4b9213ac94fb36|branch|c15183722fff4968|f90579090956c85c|2a296e70d12bdb39|2122826898||t20608.8194254175s|s2960929b|2960929|rds|local|list|prf_conic||0.164||
+prf_conic_fb23e1a64986c8fd|branch|da29bded3eadbcfd|f90579090956c85c|2a296e70d12bdb39|978419400||t20608.8194464327s|s3193680b|3193680|rds|local|list|prf_conic||0.253||
+prf_conic_f6c594d0c3cc7458|branch|3d6ab4a75723ed3a|f90579090956c85c|2a296e70d12bdb39|858619839||t20608.8194671242s|s3197321b|3197321|rds|local|list|prf_conic||0.17||
+prf_conic|pattern|07c0b6e5866847ee|f90579090956c85c||-41048013||||17707883|rds|local|list||prf_conic_2f49bf84a78ce4f4*prf_conic_731aa5bcea2c2655*prf_conic_8910e5acf0dcfe36*prf_conic_7e4b9213ac94fb36*prf_conic_fb23e1a64986c8fd*prf_conic_f6c594d0c3cc7458|1.342||
+.rv|object|2f8c5d45252cb39b
+count_focos|function|e040230cf218b50b
+count_sinistros|function|2b05efbb22241477
+prepare_focos|function|99a0037284617b8a
+filter_vdma|function|1c50c589a49a261e
+prepare_snv|function|81b188d02c5a8f35
+prepare_prf|function|73d079db82eb5a44
+build_dataset|function|5556d49f277e4a7e
+vdma_path|stem|9160069a54e95f54|ac43ba7f7e4dc87b|2c530c1562a7fbd1|614814417|data/vdma/vdma.rds|t20608.836762301s|s3652066b|3652066|file|local|vector|||0.351|package ‘sf’ was built under R version 4.4.3. package ‘dplyr’ was built under R version 4.4.3. package ‘tidyr’ was built under R version 4.4.3. package ‘lubridate’ was built under R version 4.4.3|
+vdma_raw|stem|9160069a54e95f54|fd3c73487bc72ff1|6463802c9ec97c7e|-1818474100||t20608.836933176s|s3652066b|3652066|rds|local|vector|||0.144||
+vdma_ano_2f49bf84a78ce4f4|branch|eaffbb15ce77d4a5|3577c875f3c832a1|4f23581b4dda89af|1019749450||t20608.8369370136s|s1035683b|1035683|rds|local|list|vdma_ano||0.012||
+vdma_ano_731aa5bcea2c2655|branch|ac8df0e8742c7701|3577c875f3c832a1|4f23581b4dda89af|107240917||t20608.8369393031s|s51404b|51404|rds|local|list|vdma_ano||0.017||
+vdma_ano_8910e5acf0dcfe36|branch|8ce9011e37488e99|3577c875f3c832a1|4f23581b4dda89af|1550459223||t20608.8369426507s|s576946b|576946|rds|local|list|vdma_ano||0.012||
+vdma_ano_7e4b9213ac94fb36|branch|10d05f9133ab4dda|3577c875f3c832a1|4f23581b4dda89af|505146782||t20608.8369465596s|s587455b|587455|rds|local|list|vdma_ano||0.004||
+vdma_ano_fb23e1a64986c8fd|branch|35c266fdad429e43|3577c875f3c832a1|4f23581b4dda89af|391526307||t20608.8369497277s|s510530b|510530|rds|local|list|vdma_ano||0.013||
+vdma_ano_f6c594d0c3cc7458|branch|4e857c2f6bb16975|3577c875f3c832a1|4f23581b4dda89af|-461751142||t20608.8369534736s|s510264b|510264|rds|local|list|vdma_ano||0.059||
+vdma_ano|pattern|570ae88f6c8493cc|3577c875f3c832a1||-1763918000||||3272282|rds|local|list||vdma_ano_2f49bf84a78ce4f4*vdma_ano_731aa5bcea2c2655*vdma_ano_8910e5acf0dcfe36*vdma_ano_7e4b9213ac94fb36*vdma_ano_fb23e1a64986c8fd*vdma_ano_f6c594d0c3cc7458|0.117||
+dataset_1c838571fec84791|branch|8b17ad83be05413c|7aed5a777be81683|ad1d24e8952fdd09|895449902||t20608.8372281936s|s74088890b|74088890|rds|local|list|dataset||16.113||
+dataset_d668e27c5d4863aa|branch|04328181ea107be0|7aed5a777be81683|70fd379476c78315|730716566||t20608.8375050817s|s74074712b|74074712|rds|local|list|dataset||15.925||
+dataset_e6deea184be535d2|branch|6cf6b06d6003eab3|7aed5a777be81683|81a631c6230d1735|-272693024||t20608.8377789219s|s74074089b|74074089|rds|local|list|dataset||16.079||
+dataset_42fdfac37bae9499|branch|6e69b6d00e3b332b|7aed5a777be81683|2b30861cc01266ee|-474964577||t20608.83805536s|s74074378b|74074378|rds|local|list|dataset||16.275||
+dataset_be3e07f524a893b3|branch|3f28863322bb6f41|7aed5a777be81683|cba66b827a4104ca|1056259559||t20608.8383379571s|s74075464b|74075464|rds|local|list|dataset||16.466||
+dataset_54a4f275e1b18247|branch|9c78763fbfa1ea08|7aed5a777be81683|c8815829a2d85be3|-632797988||t20608.8386170893s|s74075083b|74075083|rds|local|list|dataset||16.669||
+dataset|pattern|f5eb2762796a07aa|7aed5a777be81683||728897448||||444462616|rds|local|list||dataset_1c838571fec84791*dataset_d668e27c5d4863aa*dataset_e6deea184be535d2*dataset_42fdfac37bae9499*dataset_be3e07f524a893b3*dataset_54a4f275e1b18247|97.527||
