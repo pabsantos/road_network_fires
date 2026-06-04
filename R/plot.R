@@ -5,7 +5,16 @@ prepare_br <- function(crs) {
         sf::st_transform(crs = crs)
 }
 
-mapa_rodovia <- function(taxas, br, var, label, transform) {
+mapa_rodovia <- function(
+    taxas,
+    br,
+    var,
+    label,
+    transform,
+    limites,
+    breaks = ggplot2::waiver(),
+    labels = ggplot2::waiver()
+) {
     ggplot2::ggplot() +
         ggplot2::geom_sf(
             data = br,
@@ -18,30 +27,45 @@ mapa_rodovia <- function(taxas, br, var, label, transform) {
         ggplot2::scale_color_viridis_c(
             direction = -1,
             option = "magma",
-            transform = transform
+            transform = transform,
+            limits = limites,
+            breaks = breaks,
+            labels = labels
         ) +
         ggplot2::labs(color = label)
 }
 
-salvar_mapas <- function(taxas, br, ano, dir = "plots") {
+# intervalo global (min/max) de cada variável sobre todos os anos, para que os
+# mapas de uma mesma variável compartilhem a escala de cor e sejam comparáveis.
+calc_limites <- function(taxas) {
+    vars <- c("fluxo", "taxa_sinistros", "taxa_focos", "n_focos", "n_sinistros")
+    lapply(stats::setNames(vars, vars), function(v) {
+        range(unlist(lapply(taxas, function(t) t[[v]])), na.rm = TRUE)
+    })
+}
+
+salvar_mapas <- function(taxas, br, ano, limites, dir = "plots") {
     specs <- list(
         list(
             var = "fluxo",
             label = "Fluxo de veículos:",
             transform = "identity",
-            filtra_fluxo = TRUE
+            filtra_fluxo = TRUE,
+            labels = scales::label_number(big.mark = ".", decimal.mark = ",")
         ),
         list(
             var = "taxa_sinistros",
             label = "Taxa de sinistros:",
             transform = "log1p",
-            filtra_fluxo = TRUE
+            filtra_fluxo = TRUE,
+            breaks = c(0, 1, 5, 10, 25, 50, 100)
         ),
         list(
             var = "taxa_focos",
             label = "Taxa de focos:",
             transform = "log1p",
-            filtra_fluxo = TRUE
+            filtra_fluxo = TRUE,
+            breaks = c(0, 1, 2, 4, 6)
         ),
         list(
             var = "n_focos",
@@ -73,7 +97,10 @@ salvar_mapas <- function(taxas, br, ano, dir = "plots") {
                 br,
                 spec$var,
                 spec$label,
-                spec$transform
+                spec$transform,
+                limites[[spec$var]],
+                spec$breaks %||% ggplot2::waiver(),
+                spec$labels %||% ggplot2::waiver()
             )
 
             caminho <- file.path(dir, paste0(spec$var, "_", ano, ".png"))

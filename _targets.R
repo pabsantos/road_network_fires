@@ -69,9 +69,10 @@ list(
         pattern = map(dataset),
         iteration = "list"
     ),
+    tar_target(limites, calc_limites(taxas)),
     tar_target(
         mapas,
-        salvar_mapas(taxas, br_conic, anos),
+        salvar_mapas(taxas, br_conic, anos, limites),
         pattern = map(taxas, anos),
         format = "file"
     )
