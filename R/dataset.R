@@ -68,3 +68,13 @@ build_dataset <- function(
         tidyr::replace_na(list(n_sinistros = 0)) |>
         dplyr::select(id_trecho_, ano, n_focos, n_sinistros, fluxo, dist_m)
 }
+
+exportar_csv <- function(dataset, dir = "data") {
+    dir.create(dir, showWarnings = FALSE, recursive = TRUE)
+    caminho <- file.path(dir, "dataset.csv")
+    # junta todos os anos e descarta a geometria (só atributos)
+    completo <- lapply(dataset, sf::st_drop_geometry)
+    completo <- do.call(rbind, completo)
+    readr::write_csv(completo, caminho)
+    caminho
+}

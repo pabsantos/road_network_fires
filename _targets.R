@@ -75,5 +75,7 @@ list(
         salvar_mapas(taxas, br_conic, anos, limites),
         pattern = map(taxas, anos),
         format = "file"
-    )
+    ),
+
+    tar_target(csv, exportar_csv(dataset), format = "file")
 )
