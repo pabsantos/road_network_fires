@@ -59,14 +59,20 @@ build_dataset <- function(
             count_sinistros(snv_conic, prf_conic),
             by = "id_trecho_"
         ) |>
-        dplyr::left_join(vdma_ano, by = "id_trecho_") |>
+        dplyr::left_join(
+            dplyr::select(vdma_ano, id_trecho_, VMDa_C, VMDa_D),
+            by = "id_trecho_"
+        ) |>
         dplyr::mutate(
             ano = .env$ano,
             fluxo = (VMDa_C + VMDa_D) * 365,
             dist_m = as.numeric(sf::st_length(geometry))
         ) |>
         tidyr::replace_na(list(n_sinistros = 0)) |>
-        dplyr::select(id_trecho_, ano, n_focos, n_sinistros, fluxo, dist_m)
+        dplyr::select(
+            id_trecho_, sg_uf, vl_br, ul, vl_km_inic, vl_km_fina,
+            ano, n_focos, n_sinistros, fluxo, dist_m
+        )
 }
 
 exportar_csv <- function(dataset, dir = "data") {
